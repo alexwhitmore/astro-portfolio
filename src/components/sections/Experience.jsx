@@ -68,14 +68,18 @@ const Experience = () => {
         <div className='nav flex'>
           <ul className='tab'>
             <li
-              className={isActive === 'tabOne' ? 'active tab-item' : 'tab-item'}
+              className={
+                isActive === 'tabOne' ? 'active tab-item tab-one' : 'tab-item'
+              }
               onClick={tabOneHandler}>
               Engineering Co-op
             </li>
           </ul>
           <ul className='tab'>
             <li
-              className={isActive === 'tabTwo' ? 'active tab-item' : 'tab-item'}
+              className={
+                isActive === 'tabTwo' ? 'active tab-item tab-two' : 'tab-item'
+              }
               onClick={tabTwoHandler}>
               Software Engineer I
             </li>

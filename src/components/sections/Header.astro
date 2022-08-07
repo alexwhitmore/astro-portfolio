@@ -5,9 +5,9 @@ import HeaderScrollLink from './HeaderScrollLink'
 ---
 
 <header>
-  <nav class='navbar-wrapper'>
+  <nav class='navbar-wrapper flex'>
       <a href="/">Alex Whitmore</a>
-        <div class='navbar-links'>
+        <div class='navbar-links flex'>
           <HeaderMenu client:load />
 
           <HeaderScrollLink client:idle text='About' location='#about' headerClass='navbar-links__item' offset={-100} />
@@ -23,7 +23,6 @@ import HeaderScrollLink from './HeaderScrollLink'
 
 <style>
   .navbar-wrapper {
-    display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1.75rem 2.25rem;
@@ -31,30 +30,10 @@ import HeaderScrollLink from './HeaderScrollLink'
     position: fixed;
     background: var(--theme-bg);
     box-shadow: var(--theme-shadow);
-    z-index: 1;
   }
 
   .navbar-links {
-    display: flex;
     align-items: center;
     justify-content: center;
-  }
-
-  .menu-icon {
-    display: none;
-  }
-
-  .menu-icon-wrapper {
-    display: none;
-  }
-
-  @media only screen and (max-width: 550px) {
-    .menu-icon-wrapper {
-      display: unset;
-      padding: 0;
-      height: 30px;
-      margin-right: 0.5rem;
-      padding: 5px;
-    }
   }
 </style>

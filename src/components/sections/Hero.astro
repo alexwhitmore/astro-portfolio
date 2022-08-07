@@ -23,7 +23,7 @@ import Button from '../Button.astro'
   </div>
   </Container>
 
-<style scoped>
+<style>
 .hero-wrapper {
   height: 100%;
   flex-direction: column;
@@ -31,13 +31,8 @@ import Button from '../Button.astro'
   justify-content: center;
 }
 
-.hero-wrapper-inner {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
 .hero-intro {
+  font-size: clamp(25px, 2vw, 80px);
   color: var(--theme-accent);
 }
 

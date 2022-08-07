@@ -11,7 +11,6 @@
 
 .tabs-wrapper {
   flex-direction: column;
-  border-radius: var(--theme-border-radius);
 }
 
 .nav {
@@ -34,8 +33,6 @@
 }
 
 .tab-item {
-  font-weight: bold;
-  letter-spacing: 0.05em;
   padding: 1rem 0;
   border-bottom: 2px solid var(--theme-code-inline-bg);
 }
