@@ -1,0 +1,24 @@
+---
+import '../styles/theme.css'
+import '../styles/index.css'
+import '../styles/code.css'
+
+export interface Props {
+	title: string;
+}
+
+const { title } = Astro.props as Props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+		<title>{title || 'Portfolio'}</title>
+	</head>
+	<body>
+		<slot />
+	</body>
+</html>

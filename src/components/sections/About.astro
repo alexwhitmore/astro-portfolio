@@ -1,0 +1,88 @@
+---
+import Container from '../Container.astro'
+import me from '/assets/me.jpg'
+---
+
+<Container id='about'>
+  <!-- <h2 class='about-header'>
+    About Me
+  </h2> -->
+
+  <div class="about-wrapper flex">
+    <div class='inner-wrapper'>
+        <div>
+          <h2 class='about-header'>
+            About Me
+          </h2>
+          <p class='about-p'>
+            This is going to be a paragraph with a brief introduction of myself. This is going to be a paragraph with a brief introduction of myself. This is going to be a paragraph with a brief introduction of myself. This is going to be a paragraph with a brief introduction of myself.
+          </p>
+          <!-- <br />
+          <p class='about-p'>
+            This is going to be a paragraph with a brief introduction of myself. This is going to be a paragraph with a brief introduction of myself. This is going to be a paragraph with a brief introduction of myself. This is going to be a paragraph with a brief introduction of myself.
+          </p>
+          <br />
+          <p class='about-p'>
+            This is going to be a paragraph with a brief introduction of myself. This is going to be a paragraph with a brief introduction of myself. This is going to be a paragraph with a brief introduction of myself. This is going to be a paragraph with a brief introduction of myself.
+          </p> -->
+        </div>
+        <img src={me} class='about-img' alt='A picture of Alex in front of rocks.' />
+    </div>
+  </div>
+</Container>
+
+<style>
+.about-wrapper {
+  height: calc(100vh - 66.5px);
+  flex-direction: column;
+  align-items: center;
+ justify-content: center;
+}
+
+.about-p {
+  line-height: 1.75;
+}
+
+.about-img {
+  border-radius: 4px;
+  box-shadow: var(--theme-shadow);
+  margin-top: 2rem;
+  width: min(75%, 300px);
+}
+
+.inner-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+@media screen and (min-width: 600px) {
+  .about-header::after {
+    width: 63%;
+    margin-left: 170px;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .inner-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: start;
+    gap: 2rem;
+  }
+
+  .about-img {
+    margin-top: 4rem;
+  }
+
+  .about-header {
+    margin-bottom: 0rem;
+  }
+
+  :is(.about-p):first-of-type {
+    padding-top: 1.5rem;
+  }
+}
+</style>

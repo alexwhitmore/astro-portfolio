@@ -1,0 +1,51 @@
+---
+import Container from '../Container.astro'
+import Button from '../Button.astro'
+---
+
+<Container>
+  <div class="hero-wrapper flex">
+    <div class="hero-wrapper-inner">
+    <h4 class='hero-intro'>
+      Hi, my name is
+    </h4>
+    <h2 class='hero-name'>
+      Alex Whitmore.
+    </h2>
+    <p class='hero-paragraph'>
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic minus maxime velit voluptas in deserunt repudiandae adipisci consequatur nobis corporis?
+    </p>
+
+    <div class='button-wrapper'>
+        <Button>Learn More</Button>
+    </div>
+  </div>
+  </div>
+  </Container>
+
+<style scoped>
+.hero-wrapper {
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-wrapper-inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero-intro {
+  color: var(--theme-accent);
+}
+
+.hero-name {
+  font-size: clamp(40px, 8vw, 80px);
+}
+
+.button-wrapper {
+  margin-top: 1rem;
+}
+</style>

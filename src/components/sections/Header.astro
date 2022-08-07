@@ -1,0 +1,60 @@
+---
+import ThemeToggler from '../ThemeToggler'
+import HeaderMenu from '../HeaderMenu'
+import HeaderScrollLink from './HeaderScrollLink'
+---
+
+<header>
+  <nav class='navbar-wrapper'>
+      <a href="/">Alex Whitmore</a>
+        <div class='navbar-links'>
+          <HeaderMenu client:load />
+
+          <HeaderScrollLink client:idle text='About' location='#about' headerClass='navbar-links__item' offset={-100} />
+
+          <HeaderScrollLink client:idle text='Experience' location='#experience' headerClass='navbar-links__item' offset={-35} />
+
+          <HeaderScrollLink client:idle text='Contact' location='#contact' headerClass='navbar-links__item' offset={-75} />
+
+          <ThemeToggler client:idle />
+        </div>
+  </nav>
+</header>
+
+<style>
+  .navbar-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.75rem 2.25rem;
+    width: 100%;
+    position: fixed;
+    background: var(--theme-bg);
+    box-shadow: var(--theme-shadow);
+    z-index: 1;
+  }
+
+  .navbar-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .menu-icon {
+    display: none;
+  }
+
+  .menu-icon-wrapper {
+    display: none;
+  }
+
+  @media only screen and (max-width: 550px) {
+    .menu-icon-wrapper {
+      display: unset;
+      padding: 0;
+      height: 30px;
+      margin-right: 0.5rem;
+      padding: 5px;
+    }
+  }
+</style>

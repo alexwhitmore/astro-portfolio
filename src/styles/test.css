@@ -1,0 +1,10 @@
+.navbar-links__item {
+  list-style-type: none;
+  margin: 0 0.75rem;
+}
+
+@media only screen and (max-width: 550px) {
+  .navbar-links__item {
+    display: none;
+  }
+}
