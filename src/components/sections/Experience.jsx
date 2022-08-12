@@ -47,8 +47,8 @@ const SecondTab = () => {
       <br />
       <div className='test-tab'>
         <p className='tab-body-text'>
-          Designed a highly available and disaster resistant application
-          architecture.
+          Responsible for the design and implementation of a highly available
+          and disaster resistant application architecture.
         </p>
       </div>
       <br />
