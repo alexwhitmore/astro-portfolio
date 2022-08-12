@@ -1,16 +1,12 @@
 import { createSignal } from 'solid-js';
-import { experience } from '@config';
 import '../../styles/experience.css';
 
-console.log(experience);
-
 const FirstTab = () => {
-  const { jobOne } = experience;
   return (
     <div className='tab-body first-tab'>
       <div className='test-tab'>
         <p className='tab-body-text'>
-          Worked in Azure DevOps to create infrastructure/resources, improve
+          Worked with Azure DevOps to create infrastructure/resources, improve
           automation, and assist with code deployments. Also took part in
           several co-op projects where we then presented in front of 60+ people
           including the senior IT leadership.

@@ -29,13 +29,13 @@ const icons = [
 const initializeTheme = () => {
   let theme;
   if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
-    theme = localStorage.getItem('theme') as 'light' | 'dark';
+    theme = localStorage.getItem('theme');
   }
   return theme;
 };
 
 const ThemeToggler = () => {
-  const [theme, setTheme] = createSignal<string>(initializeTheme());
+  const [theme, setTheme] = createSignal(initializeTheme());
 
   createEffect(() => {
     const root = document.documentElement;
