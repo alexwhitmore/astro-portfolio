@@ -7,6 +7,7 @@
 
 .experience-header {
   margin-bottom: 2rem;
+  scroll-margin-top: 3.5em;
 }
 
 .tabs-wrapper {
@@ -19,11 +20,13 @@
 }
 
 .tab {
-  width: 50%;
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
   text-align: center;
 }
 
-.tab:hover {
+.tab-item:hover {
   background-color: hsla(179, 51%, 39%, 0.25);
 }
 
@@ -33,6 +36,7 @@
 }
 
 .tab-item {
+  width: 100%;
   padding: 1rem 0;
   border-bottom: 2px solid var(--theme-code-inline-bg);
 }
@@ -66,4 +70,10 @@
   margin-left: 0.75rem;
   display: inline-block;
   color: var(--theme-button-outline);
+}
+
+@media screen and (min-width: 550px) {
+  .experience-header {
+    scroll-margin-top: 4em;
+  }
 }

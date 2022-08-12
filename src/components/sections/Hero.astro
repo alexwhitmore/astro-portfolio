@@ -1,6 +1,7 @@
 ---
 import Container from '../Container.astro'
 import Button from '../Button.astro'
+import { heroName, heroInfo } from '@config'
 ---
 
 <Container>
@@ -10,14 +11,23 @@ import Button from '../Button.astro'
       Hi, my name is
     </h4>
     <h2 class='hero-name'>
-      Alex Whitmore.
+      {heroName ? heroName : 'John Doe'}
     </h2>
     <p class='hero-paragraph'>
-      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic minus maxime velit voluptas in deserunt repudiandae adipisci consequatur nobis corporis?
+      {heroInfo ? heroInfo : 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima eum, quasi quo provident rem natus deleniti? Alias aut rerum labore.'}
     </p>
 
     <div class='button-wrapper'>
-        <Button>Learn More</Button>
+      <a
+      target="_blank"
+      rel="noopener noreferrer"
+      class='btn-inner'
+      href='mailto:heyimalexw@gmail.com'
+      >
+        <Button>
+          Learn More
+        </Button>
+      </a>
     </div>
   </div>
   </div>
@@ -40,7 +50,15 @@ import Button from '../Button.astro'
   font-size: clamp(40px, 8vw, 80px);
 }
 
+.hero-paragraph {
+  margin-top: 1.5rem;
+}
+
 .button-wrapper {
-  margin-top: 1rem;
+  margin-top: 2rem;
+}
+
+.btn-inner {
+  text-decoration: none;
 }
 </style>

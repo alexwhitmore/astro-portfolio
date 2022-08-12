@@ -1,8 +1,7 @@
-import { h, Fragment } from 'preact';
-import { useState, useEffect } from 'preact/hooks';
+import { createEffect, createSignal } from 'solid-js';
 import '../styles/button.css';
 
-const themes = ['light', 'dark'];
+let themes = ['light', 'dark'];
 
 const icons = [
   <svg
@@ -27,36 +26,35 @@ const icons = [
   </svg>,
 ];
 
-const ThemeToggler = () => {
-  const [theme, setTheme] = useState(() => {
-    if (import.meta.env.SSR) {
-      return undefined;
-    }
-    if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
-      return localStorage.getItem('theme');
-    }
-    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-      return 'dark';
-    }
-    return 'light';
-  });
+const initializeTheme = () => {
+  let theme;
+  if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
+    theme = localStorage.getItem('theme') as 'light' | 'dark';
+  }
+  return theme;
+};
 
-  useEffect(() => {
+const ThemeToggler = () => {
+  const [theme, setTheme] = createSignal<string>(initializeTheme());
+
+  createEffect(() => {
     const root = document.documentElement;
-    if (theme === 'light') {
+    if (theme() === 'light') {
       root.classList.remove('theme-dark');
+      localStorage.setItem('theme', 'light');
     } else {
       root.classList.add('theme-dark');
+      localStorage.setItem('theme', 'dark');
     }
-  }, [theme]);
+  });
 
   return (
-    <div class='theme-toggle'>
+    <div className='theme-toggle'>
       {themes.map((t, i) => {
         const icon = icons[i];
-        const checked = t === theme;
+        const checked = t === theme();
         return (
-          <label class={checked ? 'checked' : ''}>
+          <label className={checked ? 'checked' : ''}>
             {icon}
             <input
               type='radio'

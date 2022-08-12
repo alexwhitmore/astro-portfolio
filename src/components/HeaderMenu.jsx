@@ -1,6 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
 import '../styles/header-menu.css';
-import HeaderScrollLink from './sections/HeaderScrollLink';
 
 const HeaderMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -42,15 +41,9 @@ const HeaderMenu = () => {
       </button>
       {isOpen && (
         <div id='myDropdown' className='dropdown-content'>
-          <HeaderScrollLink
-            text='About'
-            location='#about'
-            offset={-50}
-            // onClick={buttonHandler}
-          />
-          {/* <a href='#about' onClick={buttonHandler}>
+          <a href='#about' onClick={buttonHandler}>
             About
-          </a> */}
+          </a>
           <a href='#experience' onClick={buttonHandler}>
             Experience
           </a>

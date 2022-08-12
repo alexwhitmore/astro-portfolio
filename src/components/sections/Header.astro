@@ -1,7 +1,6 @@
 ---
 import ThemeToggler from '../ThemeToggler'
 import HeaderMenu from '../HeaderMenu'
-import HeaderScrollLink from './HeaderScrollLink'
 ---
 
 <header>
@@ -9,14 +8,18 @@ import HeaderScrollLink from './HeaderScrollLink'
       <a href="/">Alex Whitmore</a>
         <div class='navbar-links flex'>
           <HeaderMenu client:load />
+          
+          <a href='#about' class='navbar-links__item'>
+            About
+          </a>
+          <a href='#experience' class='navbar-links__item'>
+            Experience
+          </a>
+          <a href='#contact' class='navbar-links__item'>
+            Contact
+          </a>
 
-          <HeaderScrollLink client:idle text='About' location='#about' headerClass='navbar-links__item' offset={-100} />
-
-          <HeaderScrollLink client:idle text='Experience' location='#experience' headerClass='navbar-links__item' offset={-35} />
-
-          <HeaderScrollLink client:idle text='Contact' location='#contact' headerClass='navbar-links__item' offset={-75} />
-
-          <ThemeToggler client:idle />
+          <ThemeToggler client:load />
         </div>
   </nav>
 </header>
@@ -35,5 +38,15 @@ import HeaderScrollLink from './HeaderScrollLink'
   .navbar-links {
     align-items: center;
     justify-content: center;
+  }
+
+  .navbar-links__item {
+    display: none;
+  }
+
+  @media screen and (min-width: 550px) {
+    .navbar-links__item {
+      display: unset;
+    }
   }
 </style>

@@ -1,5 +1,10 @@
-.test {
+.menu-icon-wrapper {
   display: none;
+}
+
+.navbar-links__item {
+  list-style-type: none;
+  margin: 0 0.75rem;
 }
 
 @media screen and (max-width: 550px) {
@@ -16,11 +21,6 @@
     color: var(--theme-code-inline-bg);
     align-self: center;
     cursor: pointer;
-  }
-
-  .test {
-    display: unset;
-    position: relative;
   }
 
   .dropdown-content {

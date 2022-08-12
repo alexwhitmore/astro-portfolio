@@ -1,5 +1,13 @@
 {
+  "heroName": "Alex Whitmore.",
+  "heroInfo": "I'm a software engineer specializing in DevOps who also has a passion for creating exceptional web experiences. I am currently focused on Azure, Cloud architecture/design, and building highly available applications.",
   "email": "heyimalexw@gmail.com",
   "twitterUrl": "https://twitter.com/theAlexWhitmore",
-  "aboutMeText": "This is going to be a paragraph with a brief introduction of myself. This is going to be a paragraph with a brief introduction of myself. This is going to be a paragraph with a brief introduction of myself. This is going to be a paragraph with a brief introduction of myself."
+  "aboutMeText": "Hi there! My name is Alex and I love buildings things. I first grew an interest in web development in 2017 when I built a website for an e-commerce company I started that donated profits to local animal shelters. I graduated from a coding bootcamp where I learned how to be a full stack software engineer and I am now pursuing a bachelors degree in computer science.",
+  "experience": {
+    "jobOne": [
+      "One. Lorem ipsum dolor sit am consectetur adipisicing elit. Quod quidem iste incidunt temporibus consectetur amet illum laborum Optio voluptas libero quo illum? Molestias nemo labore quos, facilis fuga inventore.",
+      "One. Lorem ipsum dolor sit am consectetur adipisicing elit. Quod quidem iste incidunt temporibus consectetur amet illum laborum Optio voluptas libero quo illum? Molestias nemo labore quos, facilis fuga inventore."
+    ]
+  }
 }
