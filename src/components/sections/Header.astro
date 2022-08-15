@@ -1,13 +1,13 @@
 ---
 import ThemeToggler from '../ThemeToggler'
-import HeaderMenu from '../HeaderMenu'
+import  HeaderMenu from '../HeaderMenu'
 ---
 
 <header>
   <nav class='navbar-wrapper flex'>
       <a href="/">Alex Whitmore</a>
         <div class='navbar-links flex'>
-          <HeaderMenu client:load />
+          <HeaderMenu client:visible />
           
           <a href='#about' class='navbar-links__item'>
             About
@@ -19,7 +19,7 @@ import HeaderMenu from '../HeaderMenu'
             Contact
           </a>
 
-          <ThemeToggler client:load />
+          <ThemeToggler client:visible />
         </div>
   </nav>
 </header>

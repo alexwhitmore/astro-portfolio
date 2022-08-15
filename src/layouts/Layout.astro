@@ -14,8 +14,11 @@ const { title } = Astro.props as Props;
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/x-icon" href="/favicon.ico" />
 		<title>{title || 'Portfolio'}</title>
+    <meta name='description' content="Alex Whitmore's personal portfolio.'" />
+    <meta name='author' content='Alex Whitmore' />
+
+		<link rel="icon" type="image/x-icon" href="/favicon.ico" />
 	</head>
 	<body>
 		<slot />
