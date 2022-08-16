@@ -1,6 +1,21 @@
 ---
 import ThemeToggler from '../ThemeToggler'
-import  HeaderMenu from '../HeaderMenu'
+import HeaderMenu from '../HeaderMenu'
+
+const menuItems = [
+  {
+    'name': 'About',
+    'href': '#about'
+  },
+  {
+    'name': 'Experience',
+    'href': '#experience'
+  },
+  {
+    'name': 'Contact',
+    'href': '#contact'
+  }
+]
 ---
 
 <header>
@@ -8,16 +23,12 @@ import  HeaderMenu from '../HeaderMenu'
       <a href="/">Alex Whitmore</a>
         <div class='navbar-links flex'>
           <HeaderMenu client:visible />
-          
-          <a href='#about' class='navbar-links__item'>
-            About
+
+          {menuItems.map((item) => (
+            <a href={item.href} class='navbar-links__item'>
+            {item.name}
           </a>
-          <a href='#experience' class='navbar-links__item'>
-            Experience
-          </a>
-          <a href='#contact' class='navbar-links__item'>
-            Contact
-          </a>
+          ))}
 
           <ThemeToggler client:visible />
         </div>

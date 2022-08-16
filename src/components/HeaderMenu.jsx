@@ -1,4 +1,4 @@
-import { For, Show, createSignal, createEffect } from 'solid-js';
+import { For, Show, createSignal, onMount } from 'solid-js';
 import '../styles/header-menu.css';
 
 const HeaderMenu = () => {
@@ -11,7 +11,7 @@ const HeaderMenu = () => {
   };
 
   const outsideMenuClick = (ref) => {
-    createEffect(() => {
+    onMount(() => {
       const menuHandler = ({ target }) => {
         if (!ref.contains(target)) {
           setIsOpen(false);
@@ -26,7 +26,7 @@ const HeaderMenu = () => {
   };
 
   return (
-    <div className='test' ref={(m) => outsideMenuClick(m)}>
+    <div ref={(m) => outsideMenuClick(m)}>
       <button
         className='menu-icon-wrapper'
         aria-label='Right Align'

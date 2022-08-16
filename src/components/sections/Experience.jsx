@@ -1,4 +1,4 @@
-import { createSignal } from 'solid-js';
+import { Show, createSignal } from 'solid-js';
 import '../../styles/experience.css';
 
 const FirstTab = () => {
@@ -98,7 +98,9 @@ const Experiences = () => {
             </li>
           </ul>
         </div>
-        <div>{isActive() === 'tabOne' ? <FirstTab /> : <SecondTab />}</div>
+        <Show when={isActive() === 'tabOne'} fallback={<SecondTab />}>
+          <FirstTab />
+        </Show>
       </div>
     </section>
   );
