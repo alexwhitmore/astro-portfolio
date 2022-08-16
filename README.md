@@ -1,4 +1,4 @@
-# Welcome to [Astro](https://astro.build)xs
+# Welcome to [Astro](https://astro.build)
 
 Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
 
