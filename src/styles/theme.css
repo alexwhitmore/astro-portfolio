@@ -67,11 +67,13 @@
   --theme-hover: var(--theme-bg);
   /* @@@: not used anywhere */
   --theme-text-lighter: hsla(var(--color-gray-80), 1);
-  --theme-bg: #fdfeff;
+  /* --theme-bg: #fdfeff; */
+  --theme-bg: #f0ebdf;
   --theme-bg-hover: hsla(var(--color-gray-95), 1);
   --theme-bg-offset: hsla(var(--color-gray-90), 1);
   --theme-bg-accent: hsla(var(--color-orange), var(--theme-accent-opacity));
-  --theme-code-inline-bg: hsla(var(--color-gray-95), 1);
+  /* --theme-code-inline-bg: hsla(var(--color-gray-95), 1); */
+  --theme-code-inline-bg: rgb(231, 221, 198);
   --theme-code-inline-text: var(--theme-text);
   --theme-code-bg: hsla(217, 19%, 27%, 1);
   --theme-code-text: hsla(var(--color-gray-95), 1);

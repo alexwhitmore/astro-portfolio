@@ -1,25 +1,15 @@
 ---
+import BaseHead from '../components/BaseHead.astro'
 import '../styles/theme.css'
 import '../styles/index.css'
-
-export interface Props {
-	title: string;
-}
-
-const { title } = Astro.props as Props;
 ---
 
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<title>{title || 'Portfolio'}</title>
-    <meta name='description' content="Alex Whitmore's personal portfolio.'" />
-    <meta name='author' content='Alex Whitmore' />
-
-		<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <BaseHead />
 	</head>
+
 	<body>
 		<slot />
 	</body>

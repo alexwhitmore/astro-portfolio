@@ -1,14 +1,11 @@
 import { For, Show, createSignal, onMount } from 'solid-js';
 import '../styles/header-menu.css';
+import navItems from '../config/nav';
 
 const HeaderMenu = () => {
   const [isOpen, setIsOpen] = createSignal(false);
 
-  const navItems = ['About', 'Experience', 'Contact'];
-
-  const buttonHandler = () => {
-    setIsOpen(!isOpen());
-  };
+  const buttonHandler = () => setIsOpen(!isOpen());
 
   const outsideMenuClick = (ref) => {
     onMount(() => {
@@ -45,8 +42,8 @@ const HeaderMenu = () => {
         <div id='myDropdown' className='dropdown-content'>
           <For each={navItems}>
             {(item) => (
-              <a href={`#${item.toLowerCase()}`} onClick={buttonHandler}>
-                {item}
+              <a href={item.href} onClick={buttonHandler}>
+                {item.name}
               </a>
             )}
           </For>

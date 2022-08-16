@@ -1,27 +1,27 @@
 ---
 import Container from '../Container.astro'
-import Button from '../Button.astro'
 import Footer from './Footer.astro'
+import settings from '../../config/settings'
 ---
 
 <Container>
   <div class='contact-wrapper flex'>
-    <h2 class='contact-header'>Contact</h2>
+    <h2 class='contact-header' id='contact'>Contact</h2>
     <div>
       <p class='contact-text'>
         If you would like to connect, my inbox is always open. Whether you have a question or
         just want to say hello, I will try my best to get back to you!
       </p>
-      <Button>
         <a
           target="_blank"
           rel="noopener noreferrer"
           class='btn-inner'
-          href='mailto:heyimalexw@gmail.com'
+          href={`mailto:${settings.email}`}
           >
-          Let's Talk
+          <button>
+            Let's Talk
+          </button>
         </a>
-    </Button>
     </div>
   </div>
   <Footer />
@@ -47,6 +47,9 @@ import Footer from './Footer.astro'
 
   .btn-inner {
     color: var(--theme-bg);
+  }
+
+  .btn-inner:hover {
     text-decoration: none;
   }
 </style>

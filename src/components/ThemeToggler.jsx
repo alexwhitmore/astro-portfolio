@@ -1,4 +1,4 @@
-import { createEffect, createSignal } from 'solid-js';
+import { Show, createEffect, createSignal } from 'solid-js';
 import '../styles/button.css';
 
 let themes = ['light', 'dark'];

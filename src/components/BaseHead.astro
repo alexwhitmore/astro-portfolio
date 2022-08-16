@@ -1,0 +1,50 @@
+---
+import settings from '../config/settings.js';
+
+export interface Props {
+	title?: string;
+	description?: string;
+	image?: string;
+  twitterUrl?: string;
+  twitterUserName?: string
+}
+
+const title = Astro.props.title || settings.title;
+const description = Astro.props.description || settings.description;
+const twitterUrl = Astro.props.twitterUrl || settings.twitterUrl
+const twitterUsername = Astro.props.twitterUserName || settings.twitterUserName
+const image = '../images/me.jpg'
+---
+
+<!-- Global Metadata -->
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width" />
+<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+
+<!-- Primary Meta Tags -->
+<title>{title}</title>
+<meta name="title" content={title} />
+<meta name="description" content={description} />
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:image" content={image} />
+<meta property="og:url" content={settings.url} />
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image" />
+<meta name="twitter:creator" content={twitterUsername} />
+<meta property="twitter:url" content={twitterUrl} />
+<meta property="twitter:title" content={title} />
+<meta property="twitter:description" content={description} />
+<meta property="twitter:image" content={image} />
+
+<!-- Google Analytics -->
+<!-- <script>
+  var host = window.location.hostname;
+  if(host != 'localhost') {
+    // Place Google Analytics code here.
+  }
+</script> -->

@@ -1,9 +1,9 @@
 ---
-import { twitterUrl } from '@config'
+import settings from '../../config/settings'
 ---
 
 <footer class='footer-wrapper'>
-  <p>Designed by <a href={twitterUrl} target="_blank">Alex Whitmore</a></p>
+  <p>Designed by <a href={settings.twitterUrl} target="_blank" class='footer-link'>Alex Whitmore</a></p>
 </footer>
 
 <style>
@@ -12,5 +12,9 @@ import { twitterUrl } from '@config'
     font-size: 12px;
     padding-bottom: 5px;
 
+  }
+
+  .footer-link {
+    color: hsla(var(--color-orange), 1);
   }
 </style>

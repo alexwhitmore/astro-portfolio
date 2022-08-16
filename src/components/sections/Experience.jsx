@@ -66,13 +66,9 @@ const SecondTab = () => {
 const Experiences = () => {
   const [isActive, setIsActive] = createSignal('tabOne');
 
-  const tabOneHandler = () => {
-    setIsActive('tabOne');
-  };
+  const tabOneHandler = () => setIsActive('tabOne');
 
-  const tabTwoHandler = () => {
-    setIsActive('tabTwo');
-  };
+  const tabTwoHandler = () => setIsActive('tabTwo');
 
   return (
     <section className='experience-wrapper flex'>

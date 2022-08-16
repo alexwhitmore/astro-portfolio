@@ -20,6 +20,7 @@
 }
 
 .tab {
+  /* color: var(--theme-text-accent); */
   display: flex;
   width: 100%;
   justify-content: space-around;
@@ -28,10 +29,11 @@
 
 .tab-item:hover {
   background-color: hsla(179, 51%, 39%, 0.25);
+  cursor: pointer;
 }
 
 .tab .active {
-  border-bottom: var(--theme-button-outline) solid 2px;
+  border-bottom: hsla(var(--color-orange), 1) solid 2px;
   background-color: hsla(179, 51%, 39%, 0.25);
 }
 
@@ -69,7 +71,8 @@
   margin-top: 0px;
   margin-left: 0.75rem;
   display: inline-block;
-  color: var(--theme-button-outline);
+  /* color: var(--theme-button-outline); */
+  color: hsla(var(--color-orange), 1);
 }
 
 @media screen and (min-width: 550px) {

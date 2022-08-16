@@ -1,18 +1,17 @@
 ---
 import Container from '../Container.astro'
 import me from '../../images/me.webp'
-import { aboutMeText } from '@config'
 ---
 
 <Container>
   <div class="about-wrapper flex">
-    <div class='inner-wrapper flex'>
+    <div class='about-inner flex'>
         <div>
           <h2 class='about-header' id='about'>
             About Me
           </h2>
           <p class='about-p'>
-            {aboutMeText}
+            Hi there! My name is Alex and I love buildings things. I first grew an interest in web development in 2017 when I built a website for an e-commerce company I started that donated profits to local animal shelters. I graduated from a coding bootcamp and also earned a bachelor's degree in computer science.
           </p>
         </div>
         <img src={me} class='about-img' alt='A picture of Alex in front of rocks.' />
@@ -26,6 +25,12 @@ import { aboutMeText } from '@config'
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.about-inner {
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .about-header {
@@ -43,14 +48,8 @@ import { aboutMeText } from '@config'
   border-radius: var(--theme-border-radius);
 }
 
-.inner-wrapper {
-  flex-direction: column;
-  align-items: center;
-  gap: 0.5rem;
-}
-
 @media screen and (min-width: 700px) {
-  .inner-wrapper {
+  .about-inner {
     flex-direction: row;
     justify-content: space-between;
     align-items: start;
@@ -58,15 +57,12 @@ import { aboutMeText } from '@config'
   }
 
   .about-header {
+    margin-bottom: 0rem;
     scroll-margin-top: 7em;
   }
 
   .about-img {
     margin-top: 4rem;
-  }
-
-  .about-header {
-    margin-bottom: 0rem;
   }
 
   :is(.about-p):first-of-type {

@@ -1,21 +1,7 @@
 ---
 import ThemeToggler from '../ThemeToggler'
 import HeaderMenu from '../HeaderMenu'
-
-const menuItems = [
-  {
-    'name': 'About',
-    'href': '#about'
-  },
-  {
-    'name': 'Experience',
-    'href': '#experience'
-  },
-  {
-    'name': 'Contact',
-    'href': '#contact'
-  }
-]
+import menuItems from '../../config/nav'
 ---
 
 <header>
@@ -39,8 +25,8 @@ const menuItems = [
   .navbar-wrapper {
     justify-content: space-between;
     align-items: center;
-    padding: 1.75rem 2.25rem;
     width: 100%;
+    padding: 1.75rem 2.25rem;
     position: fixed;
     background: var(--theme-bg);
     box-shadow: var(--theme-shadow);

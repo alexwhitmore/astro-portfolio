@@ -1,7 +1,6 @@
 ---
 import Container from '../Container.astro'
-import Button from '../Button.astro'
-import { heroName, heroInfo } from '@config'
+import settings from '../../config/settings'
 ---
 
 <Container>
@@ -11,10 +10,10 @@ import { heroName, heroInfo } from '@config'
       Hi, my name is
     </h4>
     <h2 class='hero-name'>
-      {heroName ? heroName : 'John Doe'}
+      Alex Whitmore<span class='period'>.</span>
     </h2>
     <p class='hero-paragraph'>
-      {heroInfo ? heroInfo : 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima eum, quasi quo provident rem natus deleniti? Alias aut rerum labore.'}
+      I'm a software engineer specializing in DevOps who also has a passion for creating exceptional web experiences. I am currently focused on Azure, Cloud architecture/design, and building highly available applications.
     </p>
 
     <div class='button-wrapper'>
@@ -22,11 +21,11 @@ import { heroName, heroInfo } from '@config'
       target="_blank"
       rel="noopener noreferrer"
       class='btn-inner'
-      href='mailto:heyimalexw@gmail.com'
+      href={`mailto:${settings.email}`}
       >
-        <Button>
+        <button>
           Learn More
-        </Button>
+        </button>
       </a>
     </div>
   </div>
@@ -50,15 +49,20 @@ import { heroName, heroInfo } from '@config'
   font-size: clamp(40px, 8vw, 80px);
 }
 
+.period {
+  color: hsla(var(--color-orange), 1);
+}
+
 .hero-paragraph {
   margin-top: 1.5rem;
 }
 
 .button-wrapper {
   margin-top: 2rem;
+  text-decoration: none;
 }
 
-.btn-inner {
+.btn-inner:hover {
   text-decoration: none;
 }
 </style>
