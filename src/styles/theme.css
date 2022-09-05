@@ -54,10 +54,8 @@
 
 :root {
   color-scheme: light;
-  /* --theme-accent: hsla(var(--color-blue-dark), 1); */
   --theme-accent: #285e61;
   /* End */
-  /* --theme-text-accent: hsla(var(--color-orange), 1); */
   --theme-text-accent: #285e61;
   /* End */
   --theme-accent-opacity: 0.1;
